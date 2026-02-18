@@ -15,6 +15,7 @@ with open(HISTORY_PATH, 'rb') as f:
 
 # plot history
 plt.plot(history['loss'], label='Class. Model Loss')
+plt.plot(history['accuracy'], label="Class. Model Acc")
 plt.title('Classification Model Loss over Epochs')
 plt.xlabel('Epochs')
 plt.ylabel('Loss')

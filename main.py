@@ -105,6 +105,7 @@ with open(MOD_PERF_PATH, 'wb') as f:
     pickle.dump(history.history, f)
 
 plt.plot(history.history['loss'], label='Class. Model Loss')
+plt.plot(history.history['accuracy'], label="Class. Model Acc")
 plt.title('Classification Model Loss over Epochs')
 plt.xlabel('Epochs')
 plt.ylabel('Loss')
