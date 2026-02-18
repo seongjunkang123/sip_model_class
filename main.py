@@ -52,9 +52,9 @@ def build_model():
     mod = layers.BatchNormalization()(mod)
     mod = layers.Dropout(0.25)(mod)
 
-    mod = layers.Dense(512, activation='relu')(input)
-    mod = layers.BatchNormalization()(mod)
-    mod = layers.Dropout(0.25)(mod)
+    # mod = layers.Dense(512, activation='relu')(input)
+    # mod = layers.BatchNormalization()(mod)
+    # mod = layers.Dropout(0.25)(mod)
 
     output = layers.Dense(NUM_CLASS, activation='softmax')(mod)
 
