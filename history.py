@@ -14,7 +14,7 @@ with open(HISTORY_PATH, 'rb') as f:
     history = pickle.load(f)
 
 # plot history
-plt.plot(history.history['loss'], label='Class. Model Loss')
+plt.plot(history['loss'], label='Class. Model Loss')
 plt.title('Classification Model Loss over Epochs')
 plt.xlabel('Epochs')
 plt.ylabel('Loss')
