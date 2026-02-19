@@ -1,0 +1,37 @@
+gen_v6 info
+
+Number of Classes: 3
+Number of VOCs: 78
+Epoch: 30
+Batch Size: 16
+
+Model: "class_model_v6"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ input_1 (InputLayer)           [(None, 78)]         0           []                               
+                                                                                                  
+ dense (Dense)                  (None, 128)          10112       ['input_1[0][0]']                
+                                                                                                  
+ batch_normalization (BatchNorm  (None, 128)         512         ['dense[0][0]']                  
+ alization)                                                                                       
+                                                                                                  
+ dense_1 (Dense)                (None, 128)          16512       ['batch_normalization[0][0]']    
+                                                                                                  
+ batch_normalization_1 (BatchNo  (None, 128)         512         ['dense_1[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ dropout (Dropout)              (None, 128)          0           ['batch_normalization_1[0][0]']  
+                                                                                                  
+ add (Add)                      (None, 128)          0           ['dropout[0][0]',                
+                                                                  'batch_normalization[0][0]']    
+                                                                                                  
+ dense_2 (Dense)                (None, 64)           8256        ['add[0][0]']                    
+                                                                                                  
+ dense_3 (Dense)                (None, 3)            195         ['dense_2[0][0]']                
+                                                                                                  
+==================================================================================================
+Total params: 36,099
+Trainable params: 35,587
+Non-trainable params: 512
+__________________________________________________________________________________________________
