@@ -1,0 +1,27 @@
+gen_v5 info
+
+Number of Classes: 3
+Number of VOCs: 78
+Epoch: 20
+Batch Size: 16
+
+Model: "class_model_v5"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 78)]              0         
+                                                                 
+ dense_1 (Dense)             (None, 64)                5056      
+                                                                 
+ batch_normalization_1 (Batc  (None, 64)               256       
+ hNormalization)                                                 
+                                                                 
+ dropout_1 (Dropout)         (None, 64)                0         
+                                                                 
+ dense_2 (Dense)             (None, 3)                 195       
+                                                                 
+=================================================================
+Total params: 5,507
+Trainable params: 5,379
+Non-trainable params: 128
+_________________________________________________________________
