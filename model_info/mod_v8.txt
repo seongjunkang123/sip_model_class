@@ -1,0 +1,52 @@
+class_model_v8 info
+
+Architecture: Dense-only (256→128→64→32→3)
+Preprocessing: log1p + MinMaxScaler
+Number of Classes: 3
+Number of VOCs: 78
+Epochs: 300
+Batch Size: 16
+Class Weights: {0: 0.8770226537216829, 1: 1.0627450980392157, 2: 1.0883534136546185}
+
+Cross-Validation Results:
+  Mean val accuracy: 0.9558 ± 0.0276
+  Best fold: 3 (val_acc = 0.9815)
+
+Model: "class_model_v8"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_6 (InputLayer)        [(None, 78)]              0         
+                                                                 
+ dense_25 (Dense)            (None, 256)               20224     
+                                                                 
+ batch_normalization_15 (Bat  (None, 256)              1024      
+ chNormalization)                                                
+                                                                 
+ dropout_20 (Dropout)        (None, 256)               0         
+                                                                 
+ dense_26 (Dense)            (None, 128)               32896     
+                                                                 
+ batch_normalization_16 (Bat  (None, 128)              512       
+ chNormalization)                                                
+                                                                 
+ dropout_21 (Dropout)        (None, 128)               0         
+                                                                 
+ dense_27 (Dense)            (None, 64)                8256      
+                                                                 
+ batch_normalization_17 (Bat  (None, 64)               256       
+ chNormalization)                                                
+                                                                 
+ dropout_22 (Dropout)        (None, 64)                0         
+                                                                 
+ dense_28 (Dense)            (None, 32)                2080      
+                                                                 
+ dropout_23 (Dropout)        (None, 32)                0         
+                                                                 
+ dense_29 (Dense)            (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 65,347
+Trainable params: 64,451
+Non-trainable params: 896
+_________________________________________________________________
